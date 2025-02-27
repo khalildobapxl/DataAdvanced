@@ -1,0 +1,16 @@
+services:
+  oracle-db:
+    container_name: oracle-xe
+    image: oracle-database
+    environment:
+      - ORACLE_SID=xe
+    volumes:
+      - oracle-database:/opt/oracle/oradata
+    ports:
+      - 1521:1521
+      - 5500:5500
+    restart: always
+
+volumes:
+  oracle-database:
+    name: oracle_database
