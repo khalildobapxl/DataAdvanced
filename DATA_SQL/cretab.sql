@@ -39,6 +39,8 @@ SET TAB OFF
 SET PAGESIZE 100
 SET ECHO OFF 
 
+ALTER SESSION SET CURRENT_SCHEMA = student;
+
 REM ********************************************************************
 REM Create the REGIONS table to hold region information for locations
 REM HR.LOCATIONS table has a foreign key to this table.
@@ -3032,3 +3034,6 @@ IS 'Department id where employee works; foreign key to department_id
 column of the departments table';
 
 COMMIT;
+
+
+SELECT COUNT(*) FROM regions;

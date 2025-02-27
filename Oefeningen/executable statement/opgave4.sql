@@ -1,3 +1,5 @@
+ACCEPT departments_number PROMPT 'Geef het departementnummer in: '
+
 DECLARE
     v_deptno departments.department_id%TYPE;
     v_deptname departments.department_name%TYPE;
