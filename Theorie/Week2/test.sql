@@ -1,0 +1,1 @@
+Select employee_id, department_id from Employees WHERE DEPARTMENT_ID = 10;
