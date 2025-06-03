@@ -1,7 +1,7 @@
 services:
   oracle-db:
     container_name: oracle-xe
-    image: oracle-database
+    build: .
     environment:
       - ORACLE_SID=xe
     volumes:
