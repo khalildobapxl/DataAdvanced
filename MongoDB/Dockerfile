@@ -5,7 +5,7 @@ ENV MONGO_INITDB_ROOT_PASSWORD=pxl
 
 
 # The official entrypoint will run: mongorestore /docker-entrypoint-initdb.d/royals.bson
-COPY ./royals.bson /docker-entrypoint-initdb.d/royals.bson
+COPY ./royals /docker-entrypoint-initdb.d/royals
 
 EXPOSE 27017
 
