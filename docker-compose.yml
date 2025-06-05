@@ -1,7 +1,7 @@
 services:
   oracle-db:
     container_name: oracle-xe
-    build: .
+    build: ./SQL
     environment:
       - ORACLE_SID=xe
     volumes:
@@ -11,6 +11,17 @@ services:
       - 5500:5500
     restart: always
 
+  mongodb:
+    container_name: mongodb
+    build: ./MongoDB 
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    restart: always
+
 volumes:
   oracle-database:
     name: oracle_database
+  mongodb-data:
+    name: mongodb_data
