@@ -5,6 +5,12 @@ ENV MONGO_INITDB_ROOT_PASSWORD=pxl
 
 
 COPY ./royals /docker-entrypoint-initdb.d/royals
+COPY ./Movies /docker-entrypoint-initdb.d/movies
+COPY ./MoveisScratch /docker-entrypoint-initdb.d/movies
+COPY ./MovieDetails /docker-entrypoint-initdb.d/movies
+COPY ./reviews /docker-entrypoint-initdb.d/movies
+
+
 
 # COPY initializing script for the database royals
 COPY ./restore-royals.sh /docker-entrypoint-initdb.d 
