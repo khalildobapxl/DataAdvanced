@@ -9,4 +9,4 @@
 7. Clicking test should give a success message, click connect and that's it you are ready to run sql scritps.
 
 ### MongoDB
-2. 
+2. You just have to execute `docker exec -it mongodb mongosh -u student -p pxl --authenticationDatabase admin` and now you are in the container

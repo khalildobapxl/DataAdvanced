@@ -4,8 +4,10 @@ ENV MONGO_INITDB_ROOT_USERNAME=student
 ENV MONGO_INITDB_ROOT_PASSWORD=pxl
 
 
-# The official entrypoint will run: mongorestore /docker-entrypoint-initdb.d/royals.bson
 COPY ./royals /docker-entrypoint-initdb.d/royals
+
+# COPY initializing script for the database royals
+COPY ./restore-royals.sh /docker-entrypoint-initdb.d 
 
 EXPOSE 27017
 
